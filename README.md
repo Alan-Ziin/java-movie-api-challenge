@@ -7,7 +7,7 @@ Projeto de estudo em Java. Desafio de 7 dias consumindo a [OMDb API](https://www
 - Dia 1: Pegando conteúdos da API e imprimindo o JSON no console
 - Dia 2: parsear o JSON que API me retornava com Jackson
 - Dia 3: criei a classe `Movie` com encapsulamento
-- Dia 4: Fiz uma página HTML com os filmes, utilizando java puro
+- Dia 4: Fiz uma página HTML com os filmes.
 
 ## Tecnologias utilizadas no momento.
 
