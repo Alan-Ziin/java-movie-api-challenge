@@ -1,4 +1,7 @@
+package classes;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
 
 public class MovieSearchResponse {
@@ -10,4 +13,5 @@ public class MovieSearchResponse {
 
     @JsonProperty("Response")
     public String response;
+
 }

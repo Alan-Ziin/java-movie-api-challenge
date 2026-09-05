@@ -1,3 +1,5 @@
+package classes;
+
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -14,7 +16,7 @@ public class Movie  {
     @JsonProperty("Poster") private String poster;
     @JsonProperty("imdbRating")private String imdbRating;
 
-    @JsonCreator // Metodo construtor do Jackson para "construir" o objeto do Movie
+    @JsonCreator // Metodo construtor do Jackson para "construir" o objeto do classes.Movie
     public Movie(
         @JsonProperty("Title") String title,
         @JsonProperty("Year") String year,

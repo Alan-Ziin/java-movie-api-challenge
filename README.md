@@ -1,4 +1,4 @@
-# Java Movie API Challenge
+# Java classes.Movie API Challenge
 
 Projeto de estudo em Java. Desafio de 7 dias consumindo a [OMDb API](https://www.omdbapi.com/) para buscar filmes e gerar uma página HTML com pôster, título e nota.
 

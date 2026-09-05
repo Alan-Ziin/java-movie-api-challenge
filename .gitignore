@@ -8,6 +8,7 @@ out/
 .kotlin
 .idea/
 *.iml
+filmes.html
 
 ### Eclipse ###
 .apt_generated
