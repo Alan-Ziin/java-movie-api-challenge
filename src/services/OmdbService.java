@@ -7,11 +7,13 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.ArrayList;
+import java.util.List;
 
-public class OmdbService {
+public class OmdbService implements MovieApiService {
     ObjectMapper mapper = new ObjectMapper();
 
-    public MovieSearchResponse procurarPalavraChave(String palavraChave) throws IOException, InterruptedException{
+    public List<Movie> procurarPalavraChave(String palavraChave) throws IOException, InterruptedException{
         HttpClient client = HttpClient.newHttpClient();
 
         HttpRequest request = HttpRequest.newBuilder()
@@ -22,7 +24,8 @@ public class OmdbService {
         HttpResponse<String> response = client.send(request,HttpResponse.BodyHandlers.ofString());
 
         MovieSearchResponse filmesListados = mapper.readValue(response.body(), MovieSearchResponse.class);
-        return filmesListados;
+
+        return filmesListados.search;
     }
 
     public Movie procurarPorID(String imdbID) throws IOException, InterruptedException{

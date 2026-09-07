@@ -11,21 +11,22 @@ import classes.Movie;
 import classes.MovieSearchResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import services.HtmlGenerator;
+import services.MovieApiService;
 import services.OmdbService;
 
 public class Main{
     public static void main(String[] args) {
         try {
-            OmdbService omdbService = new OmdbService();
+            MovieApiService movieApiService = new OmdbService();
             HtmlGenerator htmlGenerator = new HtmlGenerator();
             String palavraChave = "batman";
 
-            MovieSearchResponse encontrados = omdbService.procurarPalavraChave(palavraChave);
+            List<Movie> encontrados = movieApiService.procurarPalavraChave(palavraChave);
 
             List<Movie> filmesEncontrados = new ArrayList<>();
 
-            for (Movie filmes : encontrados.search) {
-                Movie encontradosPorID = omdbService.procurarPorID(filmes.getImdbID());
+            for (Movie filmes : encontrados) {
+                Movie encontradosPorID = movieApiService.procurarPorID(filmes.getImdbID());
 
                 filmesEncontrados.add(encontradosPorID);
             }
