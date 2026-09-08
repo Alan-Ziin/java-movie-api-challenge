@@ -12,7 +12,7 @@ public class HtmlGenerator {
              htmlFilmes = htmlFilmes + "<div id='cardFilme'>"
                     + "<h2>" + filme.getTitle() + "</h2>"
                     + "<img src='" + filme.getPoster() + "' alt='poster do filme'>"
-                    + "<p>" + filme.getImdbRating() + "</p>"
+                    + "<p>" + filme.getImdbRating() +" Ano do filme: "+filme.getYear() + "</p>"
                     + "</div>";
         }
         htmlFilmes = htmlFilmes + "</body>" + "</html>";

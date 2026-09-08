@@ -5,6 +5,8 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import classes.Movie;
@@ -12,6 +14,7 @@ import classes.MovieSearchResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import services.HtmlGenerator;
 import services.MovieApiService;
+import services.MovieComparators;
 import services.OmdbService;
 
 public class Main{
@@ -30,6 +33,8 @@ public class Main{
 
                 filmesEncontrados.add(encontradosPorID);
             }
+
+            Collections.sort(filmesEncontrados, MovieComparators.porAno());
 
             String resultHtml = htmlGenerator.retornHtml(filmesEncontrados);
             try (FileWriter writer = new FileWriter("filmes.html")) {
