@@ -1,15 +1,18 @@
-# Java classes.Movie API Challenge
+# Java Movie API Challenge
 
 Projeto de estudo em Java. Desafio de 7 dias consumindo a [OMDb API](https://www.omdbapi.com/) para buscar filmes e gerar uma página HTML com pôster, título e nota.
 
 ## O que já foi feito
 
-- Dia 1: Pegando conteúdos da API e imprimindo o JSON no console
-- Dia 2: parsear o JSON que API me retornava com Jackson
+- Dia 1: pegando conteúdo da API e imprimindo o JSON no console
+- Dia 2: parseei o JSON retornado pela API com Jackson
 - Dia 3: criei a classe `Movie` com encapsulamento
-- Dia 4: Fiz uma página HTML com os filmes.
+- Dia 4: gerei uma página HTML com os filmes
+- Dia 5: refatorei o código em main.classes (`OmdbService`, `HtmlGenerator`)
+- Dia 6: criei a interface `MovieApiService` para deixar o código genérico
+- Dia 7: ordenei a lista de filmes com `Comparator`
 
-## Tecnologias utilizadas no momento.
+## Tecnologias utilizadas
 
 - Java 17
 - Maven

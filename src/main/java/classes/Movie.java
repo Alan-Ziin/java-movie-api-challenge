@@ -16,7 +16,7 @@ public class Movie  {
     @JsonProperty("Poster") private String poster;
     @JsonProperty("imdbRating")private String imdbRating;
 
-    @JsonCreator // Metodo construtor do Jackson para "construir" o objeto do classes.Movie
+    @JsonCreator // Metodo construtor do Jackson para "construir" o objeto do main.classes.Movie
     public Movie(
         @JsonProperty("Title") String title,
         @JsonProperty("Year") String year,

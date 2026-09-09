@@ -1,6 +1,5 @@
 package services;
 import classes.Movie;
-import classes.MovieSearchResponse;
 
 import java.util.List;
 
